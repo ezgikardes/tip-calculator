@@ -1,0 +1,12 @@
+.App {
+}
+
+.percentage {
+  display: flex;
+  align-items: center;
+}
+
+.bill {
+  display: flex;
+  align-items: center;
+}

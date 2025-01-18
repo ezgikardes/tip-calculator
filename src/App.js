@@ -13,7 +13,7 @@ function App() {
   const avPercentage = (percentage1 + percentage2) / 2;
 
   return (
-    <div>
+    <div className="app-container">
       <BillInput price={price} onPrice={setPrice} />
       <SelectPercentage percentage={percentage1} onPercentage={setPercentage1}>
         How did you like the service?

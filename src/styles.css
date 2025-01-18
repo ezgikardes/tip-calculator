@@ -1,12 +1,88 @@
-.App {
+/* Genel Ayarlar */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #f0f4ff, #d9e8ff);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.percentage {
-  display: flex;
-  align-items: center;
+.app-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
 }
 
 .bill {
-  display: flex;
-  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.bill p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.bill input {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.percentage {
+  margin-bottom: 1.5rem;
+}
+
+.percentage p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.percentage select {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.amount {
+  background: #eef7ff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.amount p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+button {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
 }

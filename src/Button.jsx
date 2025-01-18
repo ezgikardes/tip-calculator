@@ -1,6 +1,8 @@
-export default function Button({ setPrice, children, setPercentage1, setPercentage2, }) {
+export default function Button({ onPrice, children, onPercentage1, onPercentage2 }) {
     function handleReset() {
-        setPrice(0);
+        onPrice(0);
+        onPercentage1(0);
+        onPercentage2(0);
     }
 
     return <button onClick={handleReset}>{children}</button>;

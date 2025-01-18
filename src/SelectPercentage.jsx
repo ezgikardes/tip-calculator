@@ -1,12 +1,12 @@
-export default function SelectPercentage({ children, onPercentage }) {
+export default function SelectPercentage({ children, percentage, onPercentage }) {
     function handlePercentage(value) {
-        if (value === "okey") {
+        if (value === "dissatisfied") {
+            onPercentage(0);
+        } else if (value === "okay") {
             onPercentage(5);
-        }
-        if (value === "good") {
+        } else if (value === "good") {
             onPercentage(10);
-        }
-        if (value === "amazing") {
+        } else {
             onPercentage(20);
         }
     }
@@ -14,9 +14,19 @@ export default function SelectPercentage({ children, onPercentage }) {
     return (
         <div className="percentage">
             <p>{children}</p>
-            <select onChange={(e) => handlePercentage(e.target.value)}>
+            <select
+                value={
+                    percentage === 0
+                        ? "dissatisfied"
+                        : percentage === 5
+                            ? "okay"
+                            : percentage === 10
+                                ? "good"
+                                : "amazing"
+                }
+                onChange={(e) => handlePercentage(e.target.value)}>
                 <option value="dissatisfied">Dissatisfied (%0)</option>
-                <option value="okey">It was okay (%5)</option>
+                <option value="okay">It was okay (%5)</option>
                 <option value="good">It was good (%10)</option>
                 <option value="amazing">Absolutely amazing! (%20)</option>
             </select>

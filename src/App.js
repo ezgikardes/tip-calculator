@@ -13,16 +13,30 @@ function App() {
   const avPercentage = (percentage1 + percentage2) / 2;
 
   return (
-    <div className="app-container">
-      <BillInput price={price} onPrice={setPrice} />
-      <SelectPercentage percentage={percentage1} onPercentage={setPercentage1}>
-        How did you like the service?
-      </SelectPercentage>
-      <SelectPercentage percentage={percentage2} onPercentage={setPercentage2}>
-        How did your friend like the service?
-      </SelectPercentage>
-      <Amount price={price} avPercentage={avPercentage}></Amount>
-      <Button setPrice={setPrice}>Reset</Button>
+    <div className="app">
+      <header className="app-header">
+        <h1>Tip Calculator💸</h1>
+      </header>
+      <div className="content">
+        <BillInput price={price} onPrice={setPrice} />
+        <SelectPercentage
+          percentage={percentage1}
+          onPercentage={setPercentage1}>
+          How did you like the service?
+        </SelectPercentage>
+        <SelectPercentage
+          percentage={percentage2}
+          onPercentage={setPercentage2}>
+          How did your friend like the service?
+        </SelectPercentage>
+        <Amount price={price} avPercentage={avPercentage}></Amount>
+        <Button
+          onPercentage1={setPercentage1}
+          onPercentage2={setPercentage2}
+          onPrice={setPrice}>
+          Reset
+        </Button>
+      </div>
     </div>
   );
 }
